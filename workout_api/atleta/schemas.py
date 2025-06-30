@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional
 
 class AtletaCreate(BaseModel):
-    nome: str = Field(..., example="João da Silva")
+    nome: str = Field(..., example="João Silva")
     cpf: str = Field(..., example="12345678900")
     centro_treinamento_id: int
     categoria_id: int
@@ -14,4 +14,3 @@ class AtletaListOut(BaseModel):
 
     class Config:
         orm_mode = True
-
